@@ -1,0 +1,59 @@
+.header
+	background-color: $bg
+	border-bottom: 5px solid $reds
+	&_top
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		padding: 50px 0
+		align-items: center
+	&_list
+			display: flex
+			flex-wrap: wrap
+			padding: 0
+			margin: 0
+			list-style-type: none
+			li
+				margin-right: 30px
+				&:last-child
+					margin-right: 0
+				a
+					text-transform: uppercase
+					color: $text
+					transition: color 0.6s
+					&:hover
+							color: $reds
+					&:hover::before
+						background-color: $reds
+					&::before
+						content: ''
+						display: block
+						margin-bottom: 8px
+						height: 2px
+						width: 8px
+						background-color: transparent
+						transition: all 0.4s
+
+@media (max-width: 850px)
+	.header
+		&_top
+			padding: 35px 0
+			flex-direction: column
+		&_list
+			margin-top: 20px
+			justify-content: center
+			li
+				margin-top: 10px
+				margin-right: 20px
+				&:last-child
+					margin-right: 0
+
+@media (max-width: 480px)
+	.header
+		&_top
+			padding: 20px 0
+		&_list
+			li
+				margin-right: 15px
+				&:last-child
+					margin-right: 0

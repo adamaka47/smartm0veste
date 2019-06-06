@@ -1,0 +1,40 @@
+.footer
+	background-color: $bg
+	color: $text
+	padding: 45px 0
+	&_flex
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&_socials
+		list-style-type: none
+		margin: 0
+		padding: 0
+		display: flex
+		font-size: 24px
+		li
+			margin-right: 15px
+			a
+				color: $reds
+				transition: color 0.2s
+				&:hover
+					color: #8dc638
+			&:last-child
+				margin-right: 0
+	a
+		color: $text
+	&_copy
+		a
+			text-decoration: underline
+
+@media (max-width: 575.98px)
+	.footer
+		&_flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			text-align: center
+		&_socials
+			margin-top: 30px
+		&_copy
+			line-height: 1.6

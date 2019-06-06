@@ -1,0 +1,93 @@
+*, *::after, *::before
+	box-sizing: border-box
+
+html
+	font-size: 16px
+
+html, body
+	width: 100%
+
+// vars
+$bg: #252525
+$robot: 'Roboto', sans-serif
+$reds: #e5493a
+$text: #848484
+
+body
+	overflow-wrap: break-word
+	word-wrap: break-word
+	font-family: 'Raleway', sans-serif
+	// font-family: 'Roboto', sans-serif
+
+// Mixins
+
+@mixin containers($min-width, $max-width, $padding)
+	min-width: $min-width
+	max-width: $max-width
+	padding: 0 $padding
+	margin: 0 auto
+
+@mixin buttons()
+	border-radius: 5px
+	background-color: $reds
+	width: 170px
+	padding: 15px 0
+	font-size: 14px
+	text-transform: uppercase
+	font-weight: 900
+	text-align: center
+	color: #fff
+	display: block
+	cursor: pointer
+	appearance: none
+	border: none
+	border: 2px solid $reds
+	transition: all 0.4s
+	&:hover
+		background-color: darken($reds, 10)
+		border-color: darken($reds, 10)
+	&:active
+		background-color: darken($reds, 20)
+		border-color: darken($reds, 20)
+	@content
+
+.btn
+	@include buttons()
+
+
+
+
+// Styles
+
+h1, h2, h3, h4, h5, h6
+	margin: 0
+
+.container
+	@include containers(290px, 1200px, 15px)
+
+img
+	display: block
+	height: auto
+	max-width: 100%
+
+a
+	display: inline-block
+	text-decoration: none
+
+button
+	cursor: pointer
+
+button, input, textarea
+	outline: none
+
+// imports
+@import 'header'
+@import 'banner'
+@import 'features'
+@import 'work'
+@import 'responsive'
+@import 'skills'
+@import 'blog'
+@import 'company'
+@import 'contact'
+@import 'footer'

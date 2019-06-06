@@ -1,0 +1,84 @@
+.company
+	padding: 80px 0
+	background-color: #202020
+	color: $text
+	&_title
+		@extend .work_title
+		margin-bottom:  30px
+		color: #fff
+		&::before
+			content: ''
+			display: block
+			height: 2px
+			width: 70px
+			margin: auto
+			margin-bottom: 30px
+			background-color: #fff
+	&_text
+		margin: 0
+		max-width: 850px
+		margin: auto
+		text-align: center
+		line-height: 1.6
+		margin-bottom: 60px
+	.carousel
+		padding: 0 110px
+		position: relative
+		.owl-nav button.owl-prev, .owl-nav button.owl-next
+			background: $reds
+			width: 30px
+			height: 30px
+			border-radius: 4px
+			position: absolute
+			margin: 0
+			top: 50%
+			transform: translateY(-50%)
+			transition: all 0.4s
+			&:hover
+				background-color: #fea100
+		.owl-nav button.owl-prev
+			left: 20px
+		.owl-nav button.owl-next
+			right: 20px
+		.owl-stage
+			display: flex
+			align-items: center
+			justify-content: center
+		.owl-item
+			img
+				max-width: 100%
+				display: block
+				margin: 0 auto
+				opacity: 0.3
+				transition: all 0.3s
+				max-height: 140px
+				&:hover
+					opacity: 1
+
+@media (max-width: 850px)
+	.company
+		.carousel
+			padding: 0 50px
+			.owl-nav button.owl-prev
+				left: 0px
+			.owl-nav button.owl-next
+				right: 0px
+			.owl-stage
+				display: flex
+				align-items: center
+				justify-content: center
+			.owl-item
+				img
+					width: 100%
+
+@media (max-width: 575.98px)
+	.company
+		padding: 50px 0
+		.carousel
+			.owl-item
+				img
+					max-width: 200px
+		&_text
+			font-size: 14px
+		&_title
+			font-size: 32px

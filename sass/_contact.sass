@@ -1,0 +1,74 @@
+.contact
+	background-color: #8dc638
+	padding-top: 80px
+	padding-bottom: 60px
+	&_title
+		@extend .company_title
+		color: #fff
+		margin-bottom: 40px
+	&_list
+		padding: 0
+		margin: 0
+		list-style-type: none
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&_item
+		width: 100%
+		flex-basis: 535px
+		margin-right: 65px
+	&_form
+		margin: 15px 0
+		&_button
+			@include buttons()
+			width: 100%
+			font-size: 20px
+			line-height: 1.4
+			font-weight: 300
+			border-radius: 10px
+			letter-spacing: 1px
+		&_input
+			width: 100%
+			margin-bottom: 20px
+			input, textarea
+				border-radius: 10px
+				background-color: $bg
+				width: 100%
+				border: none
+				box-shadow: none
+				display: block
+				resize: none
+				font-size: 20px
+				line-height: 1.4
+				color: #fff
+				padding: 16px 10px
+				padding-left: 30px
+				padding-right: 50px
+				&::placeholder
+					color: #fff
+			textarea
+				height: 200px
+		label
+			display: none
+
+	&_map
+		flex-grow: 1
+		max-width: 570px
+		margin: 15px 0
+
+
+@media (max-width: 1060px)
+	.contact
+		&_list
+			flex-direction: column
+		&_item
+			margin-right: 0
+			flex-basis: 100%
+			margin-bottom: 30px
+		&_map
+			max-width: 100%
+			width: 100%
+
+@media (max-width: 575.98px)
+	.contact
+		padding: 55px 0

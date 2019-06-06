@@ -1,0 +1,75 @@
+.banner
+	background: $bg url('../img/main_bg.jpg') center no-repeat
+	background-size: cover
+	padding: 260px 0
+	&_info
+		max-width: 580px
+		margin-left: auto
+	&_title
+		font-size: 80px
+		line-height: 1
+		color: #fff
+		text-transform: uppercase
+	&_red
+		color: $reds
+	&_subtitle
+		font-size: 42px
+		display: block
+	&_text
+		color: darken($text, 20)
+		line-height: 1.4
+		margin: 0
+		font-size: 18px
+		text-transform: uppercase
+		font-family: $robot
+		letter-spacing: 0.4px
+		font-weight: 900
+		margin-top: 15px
+		margin-bottom: 35px
+	.btn	
+		display: inline-block
+		margin-right: 25px
+		&:last-child
+			margin-right: 0
+		&-o
+			background-color: transparent
+			border-color: #fff
+			&:hover
+				background-color: #fff
+				color: $bg
+
+
+@media (max-width: 850px)
+	.banner
+		background: none
+		background-color: $bg
+		padding: 60px 0
+		&_info
+			margin-left: 0
+			max-width: 100%
+			text-align: center
+		&_title
+			font-size: 54px
+		&_subtitle
+			font-size: 24px
+		&_text
+			font-size: 14px
+			max-width: 400px
+			margin: auto
+			margin-top: 20px
+			margin-bottom: 20px
+
+@media (max-width: 480px)
+	.banner
+		&_title
+			font-size: 40px
+		&_subtitle
+			font-size: 20px
+			margin-top: 10px
+		.btn
+			margin: auto
+			margin-bottom: 15px
+			display: block
+			&:last-child
+				margin: auto
+
